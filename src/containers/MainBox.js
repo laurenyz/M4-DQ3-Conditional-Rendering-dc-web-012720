@@ -16,12 +16,14 @@ updateClickValue(event) {
 
 showComponent() {
   if (this.state.clickValue === "profile") {
-    return <Profile />
+    return "<Profile />"
   } else if (this.state.clickValue ==="cocktail") {
-    return <Cocktails />
-  } else if (this.state.clickValue === "photo")
-  } else {
-    return <Pokemon />
+    return "<Cocktails />"
+  } else if (this.state.clickValue === "photo"){
+    return "<Photos />"
+  }
+  else {
+    return "<Pokemon />"
   }
 }
 

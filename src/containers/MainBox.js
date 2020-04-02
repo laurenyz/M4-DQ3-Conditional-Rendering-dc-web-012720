@@ -3,14 +3,31 @@ import MenuBar from '../components/MenuBar.js'
 import { Profile, Photos, Cocktails, Pokemon} from '../components/Pages.js'
 
 class MainBox extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      clickValue: "profile"
+    }
+  }
+  
+updateClickValue(event) {
+  this.setState({clickValue: event.target.id})
+}
 
-showComponent
+showComponent() {
+  if (this.state.clickValue === "profile") {
+    return <Profile />
+  } else if (this.state.clickValue ==="cocktail") {
+    return <Cocktails />
+  } else if (this.state.clickValue === "")
+  }
+}
 
   render() {
 
     return (
       <div>
-        <MenuBar />
+        <MenuBar updateClickValue = {this.updateClickValue}/>
         {this.showComponent()}
       </div>
     )

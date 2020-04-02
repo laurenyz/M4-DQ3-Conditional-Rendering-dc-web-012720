@@ -19,7 +19,9 @@ showComponent() {
     return <Profile />
   } else if (this.state.clickValue ==="cocktail") {
     return <Cocktails />
-  } else if (this.state.clickValue === "")
+  } else if (this.state.clickValue === "photo")
+  } else {
+    return <Pokemon />
   }
 }
 
